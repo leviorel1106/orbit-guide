@@ -1,10 +1,10 @@
-האורביט — הפרומפטים
+האורביט: הפרומפטים
 
 === הפרומפט הראשי (Seedance 2.5, video-to-video, 7s, 9:16) ===
 
 SEEDANCE 2.5 · VIDEO-TO-VIDEO · 7s · 9:16 · ONE CONTINUOUS SHOT, NO CUTS
 
-REFERENCES — exactly three, in this order, each with exactly one job.
+REFERENCES, exactly three, in this order, each with exactly one job.
 
 @Video 1 is the CAMERA AND TIMING MASTER, and nothing else. Copy its camera
 movement exactly: the same path, the same speed, the same acceleration, the same
@@ -26,7 +26,7 @@ as shown.
 [DESCRIBE YOUR PET IN ONE PARAGRAPH: species and breed, size and build, coat
 colour and texture, coat length, ear shape and how the ears are carried, muzzle
 shape, eye colour, nose colour, any markings, and the expression you want. Be
-specific — this paragraph is what stops the model drifting away from your animal
+specific. This paragraph is what stops the model drifting away from your animal
 halfway through the shot.]
 DO NOT INHERIT from @Image 2 its background, its floor or its lighting.
 
@@ -79,26 +79,26 @@ IMAGE · ROOM PLATE · 9:16 vertical
 
 A photograph of a small room at night, empty of people and animals.
 
-LIGHT — the room is dark and lit only by low warm practical sources inside it:
+LIGHT: the room is dark and lit only by low warm practical sources inside it:
 a floor lamp with a warm bulb in one corner, a strip of light under a shelf, a
 small table lamp. No ceiling light, no daylight. The corners fall away into deep
 shadow. Low-key and moody, with rich blacks and pools of warm light.
-[TO CHANGE THE MOOD: replace the warm lamps with coloured sources — for example
-a neon sign on one wall and a cold neon tube on the opposite wall — and name the
+[TO CHANGE THE MOOD: replace the warm lamps with coloured sources, for example
+a neon sign on one wall and a cold neon tube on the opposite wall, and name the
 colour of each and which wall it is on. Light from two opposite sides is what
 makes the colour on the animal shift as the camera orbits.]
 
-FLOOR — the most important surface. A large rug with a visible, tactile texture
+FLOOR: the most important surface. A large rug with a visible, tactile texture
 laid over a dark wooden floor, lit at a grazing angle so the texture reads
 clearly. The centre of the floor is completely clear.
 
-FURNITURE — sparse and low, arranged around the open centre: a low couch against
+FURNITURE: sparse and low, arranged around the open centre: a low couch against
 one wall, a low coffee table with thin legs and open space beneath it, a shelf
 with a few objects, one tall plant. Objects sit at clearly different distances
 from one another so that moving through the room makes them pass in front of
 each other.
 
-AIR — faint atmospheric haze, so the light throws soft visible shafts.
+AIR: faint atmospheric haze, so the light throws soft visible shafts.
 
 Photorealistic interior photograph, shot on a full-frame camera, natural depth of
 field, real photographic grain, natural noise in the shadows. Not a render, not a
