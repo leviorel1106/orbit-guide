@@ -1,0 +1,111 @@
+האורביט — הפרומפטים
+
+=== הפרומפט הראשי (Seedance 2.5, video-to-video, 7s, 9:16) ===
+
+SEEDANCE 2.5 · VIDEO-TO-VIDEO · 7s · 9:16 · ONE CONTINUOUS SHOT, NO CUTS
+
+REFERENCES — exactly three, in this order, each with exactly one job.
+
+@Video 1 is the CAMERA AND TIMING MASTER, and nothing else. Copy its camera
+movement exactly: the same path, the same speed, the same acceleration, the same
+duration, the same lens, the same framing, the same motion blur, and the same
+position, pose, scale and behaviour of the animal in frame at every moment. It
+opens on an extreme close-up of the face, pulls back fast while dropping to floor
+level, performs one complete low-angle 360-degree orbit around the seated animal,
+passes low under furniture partway round, and returns to the same extreme
+close-up of the face at the end. Every one of those moves must be reproduced
+completely and at identical speed, from the first frame to the last.
+DO NOT INHERIT ANYTHING ELSE FROM @Video 1: not its room, not its walls, not its
+shelves or furniture, not its floor, not its lamps, not its colour grading, and
+not its animal. None of them appear anywhere in this video. The room in this
+video is a different room entirely.
+
+@Image 2 defines ONLY THE ANIMAL. Preserve its face, eye colour, coat colour,
+coat texture, coat length, ear shape, muzzle, body size and proportions exactly
+as shown.
+[DESCRIBE YOUR PET IN ONE PARAGRAPH: species and breed, size and build, coat
+colour and texture, coat length, ear shape and how the ears are carried, muzzle
+shape, eye colour, nose colour, any markings, and the expression you want. Be
+specific — this paragraph is what stops the model drifting away from your animal
+halfway through the shot.]
+DO NOT INHERIT from @Image 2 its background, its floor or its lighting.
+
+@Image 3 defines ONLY THE ROOM AND ITS LIGHT. Preserve it exactly as
+photographed.
+[LIST WHAT IS ACTUALLY IN YOUR ROOM PHOTO: the light sources and their colour,
+the floor and its texture, the rug, the furniture, anything low enough for a
+camera to pass underneath, and the mood.]
+DO NOT INHERIT from @Image 3 any camera angle, framing or focal length. It is a
+location, not a shot.
+
+VIDEO PROMPT. Recreate the camera move of @Video 1 with the animal from @Image 2
+inside the room from @Image 3. It sits upright in the centre of the floor, taking
+the exact same position, pose, scale, orientation and behaviour as the animal in
+@Video 1 at every moment, its head and eyes following the camera the same way
+through the whole orbit. The room's own furniture appears where the original
+room's furniture appeared along the camera path, so the camera passes low beneath
+a low table at the same moment it passed beneath furniture in @Video 1.
+[If your pet is a different size from the animal in the template video:] keep the
+body centre and the position on the floor identical and scale the body naturally.
+
+LIGHT AND COAT. AS THE CAMERA ORBITS THE ANIMAL THE LIGHT ON ITS COAT MUST
+CHANGE, because the camera passes every light source in the room in turn: a rim
+of light down one side when it faces a lamp, near-darkness through the dark
+corners, then light from the other side as it comes round, and back again.
+[If your room has strongly coloured light, name the colours here and say which
+wall each one is on.] Individual hairs catch the light and read as real fur, not
+as a smooth mass. A true contact shadow sits under the animal on the floor and
+moves correctly as the camera travels. Correct occlusion every time furniture
+crosses the lens. Photorealistic, real coat texture, real animal weight, natural
+breathing, small natural movements of the head and ears.
+
+AUDIO: quiet room tone, soft floor and fur sounds, one quiet breath. No music.
+
+CONSISTENCY: Exactly one animal. Same animal identity and same room from the
+first frame to the last. Camera path, speed, direction and timing identical to
+@Video 1 for the entire duration.
+
+NEGATIVE PROMPT: no second animal, no identity change, no breed change, no coat
+colour change, no collar, no lead, no clothing, no slow camera, no slow motion,
+no incomplete orbit, no camera stopping early, no static hold, no shortened
+camera move, no change to camera path speed or direction, no new cuts, no
+original room from @Video 1, no room change mid-shot, no daylight, no human in
+frame, no hands, no flicker, no cartoon, no cheap CGI, no plush toy look, no
+on-screen text, no watermark.
+
+=== חדר (תמונה) ===
+
+IMAGE · ROOM PLATE · 9:16 vertical
+
+A photograph of a small room at night, empty of people and animals.
+
+LIGHT — the room is dark and lit only by low warm practical sources inside it:
+a floor lamp with a warm bulb in one corner, a strip of light under a shelf, a
+small table lamp. No ceiling light, no daylight. The corners fall away into deep
+shadow. Low-key and moody, with rich blacks and pools of warm light.
+[TO CHANGE THE MOOD: replace the warm lamps with coloured sources — for example
+a neon sign on one wall and a cold neon tube on the opposite wall — and name the
+colour of each and which wall it is on. Light from two opposite sides is what
+makes the colour on the animal shift as the camera orbits.]
+
+FLOOR — the most important surface. A large rug with a visible, tactile texture
+laid over a dark wooden floor, lit at a grazing angle so the texture reads
+clearly. The centre of the floor is completely clear.
+
+FURNITURE — sparse and low, arranged around the open centre: a low couch against
+one wall, a low coffee table with thin legs and open space beneath it, a shelf
+with a few objects, one tall plant. Objects sit at clearly different distances
+from one another so that moving through the room makes them pass in front of
+each other.
+
+AIR — faint atmospheric haze, so the light throws soft visible shafts.
+
+Photorealistic interior photograph, shot on a full-frame camera, natural depth of
+field, real photographic grain, natural noise in the shadows. Not a render, not a
+3D visualisation, not an architectural catalogue photo.
+
+NEGATIVE: no people, no animals, no ceiling light, no daylight, no window light,
+no bright flat lighting, no white walls, no clutter in the centre of the floor,
+nothing blocking the middle of the room, no bare tiles, no text, no signage, no
+posters with readable writing, no TV showing an image, no watermark, no
+wide-angle distortion, no cartoon, no illustration.

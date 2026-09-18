@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>האורביט — איך מסובבים מצלמה סביב החיה שלך</title>
+<meta name="description" content="הסרטון להורדה, הפרומפט המלא להעתקה, וכל ההגדרות. טכניקת רפרנס הווידאו של Seedance 2.5.">
+<meta property="og:title" content="האורביט — איך מסובבים מצלמה סביב החיה שלך">
+<meta property="og:description" content="קח את הסרטון, החלף את החיה ואת החדר. הפרומפט המלא בפנים.">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap">
+<style>
+:root{
+  --bg:#0E1014; --surface:#171A20; --surface2:#1F232B; --ink:#EDEFF2; --muted:#9AA3B0;
+  --line:#2A2F39; --accent:#E8A24C; --accent2:#5FD3C4; --accent-ink:#0E1014;
+  --code-bg:#080A0D; --code-ink:#E7EAEF; --code-muted:#79839A; --code-hl:#FFC46B;
+  --font:'Rubik','Arial Hebrew',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;
+  line-height:1.75;direction:rtl;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 90px}
+a{color:var(--accent)}
+h1{font-weight:900;font-size:clamp(38px,8vw,62px);line-height:1.04;letter-spacing:-.02em;margin:0 0 16px;text-wrap:balance}
+h2{font-weight:800;font-size:clamp(24px,4.5vw,32px);line-height:1.2;margin:58px 0 14px;letter-spacing:-.01em}
+h3{font-weight:700;font-size:19px;margin:26px 0 8px}
+p{margin:0 0 14px;max-width:66ch}
+.lede{font-size:21px;font-weight:300;color:var(--muted);max-width:58ch;margin:0 0 28px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;color:var(--accent2);margin:0 0 14px}
+
+header.hero{padding:60px 0 4px;text-align:center}
+header.hero .lede{margin-inline:auto}
+
+.stage{margin:30px auto 8px;max-width:400px}
+.stage video{display:block;width:100%;height:auto;background:#000;border-radius:18px;border:1px solid var(--line)}
+.stage .under{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap}
+
+.btn{display:inline-block;text-decoration:none;font-family:var(--font);font-weight:700;font-size:15px;
+  background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:13px 28px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:22px 0}
+.box.accent{border-inline-start:4px solid var(--accent);background:var(--surface2)}
+.box h3{margin-top:0}
+.box p:last-child,.box ul:last-child{margin-bottom:0}
+
+.rule{background:var(--surface2);border:1px solid var(--accent);border-radius:14px;padding:22px 24px;margin:26px 0}
+.rule .tag{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--accent2);display:block;margin-bottom:8px}
+.rule b{color:var(--accent)}
+
+ol,ul{padding-inline-start:22px;margin:0 0 16px;max-width:66ch}
+li{margin-bottom:9px}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+@media(max-width:620px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card .n{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:9px;
+  background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:15px;margin-bottom:10px}
+.card b{display:block;margin-bottom:5px;font-weight:700}
+.card span{font-size:15px;color:var(--muted);line-height:1.6}
+
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}
+th,td{text-align:right;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;color:var(--muted);font-size:13px;letter-spacing:.04em}
+td:first-child{font-weight:600;white-space:nowrap;color:var(--accent2)}
+
+.beats{display:grid;grid-template-columns:auto 1fr;gap:0 18px;margin:20px 0;font-size:15px}
+.beats .t{direction:ltr;text-align:right;font-weight:700;color:var(--accent2);
+  font-variant-numeric:tabular-nums;padding:10px 0;white-space:nowrap}
+.beats .d{padding:10px 0;border-bottom:1px solid var(--line)}
+.beats .d b{display:block;font-weight:700;margin-bottom:2px}
+.beats .d span{color:var(--muted);font-size:14.5px}
+
+.prompt{background:var(--code-bg);border:1px solid var(--line);border-radius:14px;padding:16px;margin:16px 0 26px}
+.prompt .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;
+  font-size:12px;color:var(--code-muted);letter-spacing:.05em;flex-wrap:wrap}
+.prompt pre{margin:0;white-space:pre-wrap;word-wrap:break-word;direction:ltr;text-align:left;
+  font-family:var(--font);font-weight:300;font-size:13.5px;line-height:1.65;color:var(--code-ink);
+  max-height:440px;overflow:auto}
+.prompt .hl{color:var(--code-hl);font-weight:500}
+.copy{font-family:var(--font);font-size:13px;font-weight:700;background:var(--accent);color:var(--accent-ink);
+  border:0;border-radius:8px;padding:8px 15px;cursor:pointer}
+@media(prefers-reduced-motion:no-preference){.copy{transition:transform .12s}.copy:active{transform:scale(.97)}}
+
+.check{list-style:none;padding:0}
+.check li{position:relative;padding-inline-start:30px;margin-bottom:11px}
+.check li::before{content:'';position:absolute;inset-inline-start:0;top:9px;width:16px;height:16px;
+  border:2px solid var(--accent2);border-radius:5px}
+
+footer{margin-top:70px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);
+  font-size:14.5px;text-align:center}
+hr{border:0;border-top:1px solid var(--line);margin:52px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">SEEDANCE 2.5 · VIDEO REFERENCE</span>
+  <h1>האורביט</h1>
+  <p class="lede">סרטון אחד גמור הופך לתבנית מצלמה. אתה שומר את התנועה, ומחליף את החיה ואת החדר. הסרטון הזה הוא התבנית — קח אותו.</p>
+</header>
+
+<div class="stage">
+  <video src="puja-orbit.mp4" poster="puja-poster.jpg" controls playsinline preload="metadata" loop></video>
+  <div class="under">
+    <a class="btn" href="puja-orbit.mp4" download>הורדת הסרטון</a>
+    <a class="btn ghost" href="#prompt">לפרומפט</a>
+  </div>
+</div>
+
+<h2>איך זה עובד</h2>
+<p>Seedance 2.5 יודע לקבל סרטון כ<b>רפרנס מצלמה</b>. אתה נותן לו קליפ, והוא שומר את המסלול, המהירות והתזמון — ובונה מחדש את כל השאר: חיה אחרת, חדר אחר, אור אחר.</p>
+<p>זה אומר שאתה לא צריך לדעת לביים תנועת מצלמה מסובכת. היא כבר מבוימת, ואתה מעתיק אותה.</p>
+
+<div class="grid3">
+  <div class="card"><span class="n">1</span><b>הסרטון הזה</b><span>התבנית. הורד אותו מלמעלה.</span></div>
+  <div class="card"><span class="n">2</span><b>תמונה של החיה שלך</b><span>חזיתית, בגובה העיניים שלה, אור אחיד.</span></div>
+  <div class="card"><span class="n">3</span><b>תמונה של חדר</b><span>כל זווית. המודל לוקח ממנה רק את המרחב והאור.</span></div>
+</div>
+
+<div class="rule">
+  <span class="tag">הכלל שקובע הצלחה או כישלון</span>
+  <p style="margin:0"><b>שלושה רפרנסים בדיוק, בסדר הזה.</b> לא ארבעה. אם תוסיף רפרנס רביעי — למשל תמונה שנייה של החיה — תמונת החדר נדחקת החוצה, והמודל יירש את החדר מסרטון התבנית במקום מהתמונה שלך. בדקנו את זה: עם ארבעה החדר לא נכנס, עם שלושה הוא נכנס במלואו.</p>
+</div>
+
+<h2>תנועת המצלמה</h2>
+<p>זה מה שהסרטון עושה, ומה שהפרומפט נועל. שבע שניות, שוט אחד רציף, בלי קאטים:</p>
+<div class="beats">
+  <div class="t">0.0–0.5</div><div class="d"><b>קלוז-אפ קיצוני</b><span>הפנים ממלאות את הפריים. כל כך קרוב שרואים את מרקם הפרווה ואת ניצוץ האור בעין.</span></div>
+  <div class="t">0.5–1.5</div><div class="d"><b>נסיגה מהירה</b><span>המצלמה נזרקת אחורה ובו-זמנית יורדת לגובה הרצפה. החדר נחשף בבת אחת.</span></div>
+  <div class="t">1.5–3.0</div><div class="d"><b>תחילת הסיבוב</b><span>המצלמה נמוכה, מרפרפת על הרצפה. החיה במרכז, הראש עוקב אחרי העדשה.</span></div>
+  <div class="t">3.0–4.5</div><div class="d"><b>מעבר מתחת לרהיט</b><span>המצלמה חולפת מתחת לשולחן נמוך. הרגליים חוצות את הפריים בטשטוש ומסתירות לרגע.</span></div>
+  <div class="t">4.5–6.2</div><div class="d"><b>השלמת הסיבוב</b><span>סיבוב מלא של 360 מעלות, במהירות קבועה, בלי לעצור ובלי להאט.</span></div>
+  <div class="t">6.2–7.0</div><div class="d"><b>חזרה לפנים</b><span>דחיפה פנימה לאותו קלוז-אפ שפתח את השוט.</span></div>
+</div>
+
+<h2 id="prompt">הפרומפט</h2>
+<p>העתק אותו כמו שהוא. <span class="hl" style="color:var(--code-hl);font-weight:500">החלקים המסומנים</span> הם מה שאתה מחליף — תיאור החיה שלך ותיאור החדר שלך. כל השאר נשאר מילה במילה: הסעיפים שמורים למודל מה <em>לא</em> לרשת מהסרטון הם מה שמונע ממנו לגרור את החדר והחיה המקוריים פנימה.</p>
+
+<div class="prompt">
+  <div class="bar"><span>SEEDANCE 2.5 · VIDEO-TO-VIDEO · 7s · 9:16</span><button class="copy" data-copy="p1">העתק פרומפט</button></div>
+  <pre id="p1">SEEDANCE 2.5 · VIDEO-TO-VIDEO · 7s · 9:16 · ONE CONTINUOUS SHOT, NO CUTS
+
+REFERENCES — exactly three, in this order, each with exactly one job.
+
+@Video 1 is the CAMERA AND TIMING MASTER, and nothing else. Copy its camera
+movement exactly: the same path, the same speed, the same acceleration, the same
+duration, the same lens, the same framing, the same motion blur, and the same
+position, pose, scale and behaviour of the animal in frame at every moment. It
+opens on an extreme close-up of the face, pulls back fast while dropping to floor
+level, performs one complete low-angle 360-degree orbit around the seated animal,
+passes low under furniture partway round, and returns to the same extreme
+close-up of the face at the end. Every one of those moves must be reproduced
+completely and at identical speed, from the first frame to the last.
+DO NOT INHERIT ANYTHING ELSE FROM @Video 1: not its room, not its walls, not its
+shelves or furniture, not its floor, not its lamps, not its colour grading, and
+not its animal. None of them appear anywhere in this video. The room in this
+video is a different room entirely.
+
+@Image 2 defines ONLY THE ANIMAL. Preserve its face, eye colour, coat colour,
+coat texture, coat length, ear shape, muzzle, body size and proportions exactly
+as shown.
+<span class="hl">[DESCRIBE YOUR PET IN ONE PARAGRAPH: species and breed, size and build, coat
+colour and texture, coat length, ear shape and how the ears are carried, muzzle
+shape, eye colour, nose colour, any markings, and the expression you want. Be
+specific — this paragraph is what stops the model drifting away from your animal
+halfway through the shot.]</span>
+DO NOT INHERIT from @Image 2 its background, its floor or its lighting.
+
+@Image 3 defines ONLY THE ROOM AND ITS LIGHT. Preserve it exactly as
+photographed.
+<span class="hl">[LIST WHAT IS ACTUALLY IN YOUR ROOM PHOTO: the light sources and their colour,
+the floor and its texture, the rug, the furniture, anything low enough for a
+camera to pass underneath, and the mood.]</span>
+DO NOT INHERIT from @Image 3 any camera angle, framing or focal length. It is a
+location, not a shot.
+
+VIDEO PROMPT. Recreate the camera move of @Video 1 with the animal from @Image 2
+inside the room from @Image 3. It sits upright in the centre of the floor, taking
+the exact same position, pose, scale, orientation and behaviour as the animal in
+@Video 1 at every moment, its head and eyes following the camera the same way
+through the whole orbit. The room's own furniture appears where the original
+room's furniture appeared along the camera path, so the camera passes low beneath
+a low table at the same moment it passed beneath furniture in @Video 1.
+<span class="hl">[If your pet is a different size from the animal in the template video:]</span> keep the
+body centre and the position on the floor identical and scale the body naturally.
+
+LIGHT AND COAT. AS THE CAMERA ORBITS THE ANIMAL THE LIGHT ON ITS COAT MUST
+CHANGE, because the camera passes every light source in the room in turn: a rim
+of light down one side when it faces a lamp, near-darkness through the dark
+corners, then light from the other side as it comes round, and back again.
+<span class="hl">[If your room has strongly coloured light, name the colours here and say which
+wall each one is on.]</span> Individual hairs catch the light and read as real fur, not
+as a smooth mass. A true contact shadow sits under the animal on the floor and
+moves correctly as the camera travels. Correct occlusion every time furniture
+crosses the lens. Photorealistic, real coat texture, real animal weight, natural
+breathing, small natural movements of the head and ears.
+
+AUDIO: quiet room tone, soft floor and fur sounds, one quiet breath. No music.
+
+CONSISTENCY: Exactly one animal. Same animal identity and same room from the
+first frame to the last. Camera path, speed, direction and timing identical to
+@Video 1 for the entire duration.
+
+NEGATIVE PROMPT: no second animal, no identity change, no breed change, no coat
+colour change, no collar, no lead, no clothing, no slow camera, no slow motion,
+no incomplete orbit, no camera stopping early, no static hold, no shortened
+camera move, no change to camera path speed or direction, no new cuts, no
+original room from @Video 1, no room change mid-shot, no daylight, no human in
+frame, no hands, no flicker, no cartoon, no cheap CGI, no plush toy look, no
+on-screen text, no watermark.</pre>
+</div>
+
+<h2>ההגדרות</h2>
+<table>
+  <tr><th>שדה</th><th>ערך</th></tr>
+  <tr><td>מודל</td><td>Seedance 2.5</td></tr>
+  <tr><td>משך</td><td>7 שניות</td></tr>
+  <tr><td>יחס</td><td>9:16 אנכי</td></tr>
+  <tr><td>רזולוציה</td><td>1080p</td></tr>
+  <tr><td>רפרנסים</td><td>וידאו אחד + שתי תמונות, בסדר הזה</td></tr>
+</table>
+<p style="font-size:15px;color:var(--muted)">הערה על החיוב: כשיש רפרנס וידאו, רוב הפלטפורמות מחייבות על שניות הקלט <em>וגם</em> על שניות הפלט. סרטון של 7 שניות עם תבנית של 7 שניות מחויב כ-14.</p>
+
+<hr>
+
+<h2>החדר הוא חצי מהעבודה</h2>
+<p>זה הדבר שהכי הפתיע אותי. מה שגורם לשוט כזה להיראות יקר הוא לא תנועת המצלמה — <b>זו התאורה</b>. אותה תנועה בדיוק בחדר מואר ושטוח נראית זולה.</p>
+
+<div class="box accent">
+  <h3>מה לחפש בחדר</h3>
+  <ul>
+    <li><b>חשוך, עם תאורה נקודתית.</b> מנורות, לא אור תקרה. הרקע האפל הוא מה שמפריד את הפרווה מהחדר.</li>
+    <li><b>אור מכמה כיוונים.</b> המצלמה מקיפה 360 מעלות — אם האור רק מצד אחד, חצי מהסיבוב חשוך ומת.</li>
+    <li><b>רצפה עם מרקם.</b> שטיח, פרקט, בטון. המצלמה מרפרפת עליה בגובה הרצפה, והמרקם הוא מה שנותן לסיבוב את תחושת המהירות.</li>
+    <li><b>רהיט נמוך עם מרווח מתחת.</b> שולחן קפה עם רגליים דקות. המצלמה עוברת מתחתיו.</li>
+    <li><b>עומק בשכבות.</b> חפצים במרחקים שונים — הם עוברים אחד מול השני בסיבוב, וזו ההוכחה לעין שהמצלמה באמת נעה במרחב.</li>
+    <li><b>מרכז הרצפה פנוי.</b> שם החיה יושבת והמצלמה מקיפה אותה.</li>
+  </ul>
+</div>
+
+<p>אין לך חדר מתאים? תייצר אחד. זה פרומפט לתמונת חדר — שנה את התאורה ואת החפצים לפי מה שאתה רוצה:</p>
+
+<div class="prompt">
+  <div class="bar"><span>IMAGE · ROOM PLATE · 9:16</span><button class="copy" data-copy="p2">העתק פרומפט</button></div>
+  <pre id="p2">IMAGE · ROOM PLATE · 9:16 vertical
+
+A photograph of a small room at night, empty of people and animals.
+
+LIGHT — the room is dark and lit only by low warm practical sources inside it:
+a floor lamp with a warm bulb in one corner, a strip of light under a shelf, a
+small table lamp. No ceiling light, no daylight. The corners fall away into deep
+shadow. Low-key and moody, with rich blacks and pools of warm light.
+<span class="hl">[TO CHANGE THE MOOD: replace the warm lamps with coloured sources — for example
+a neon sign on one wall and a cold neon tube on the opposite wall — and name the
+colour of each and which wall it is on. Light from two opposite sides is what
+makes the colour on the animal shift as the camera orbits.]</span>
+
+FLOOR — the most important surface. A large rug with a visible, tactile texture
+laid over a dark wooden floor, lit at a grazing angle so the texture reads
+clearly. The centre of the floor is completely clear.
+
+FURNITURE — sparse and low, arranged around the open centre: a low couch against
+one wall, a low coffee table with thin legs and open space beneath it, a shelf
+with a few objects, one tall plant. Objects sit at clearly different distances
+from one another so that moving through the room makes them pass in front of
+each other.
+
+AIR — faint atmospheric haze, so the light throws soft visible shafts.
+
+Photorealistic interior photograph, shot on a full-frame camera, natural depth of
+field, real photographic grain, natural noise in the shadows. Not a render, not a
+3D visualisation, not an architectural catalogue photo.
+
+NEGATIVE: no people, no animals, no ceiling light, no daylight, no window light,
+no bright flat lighting, no white walls, no clutter in the centre of the floor,
+nothing blocking the middle of the room, no bare tiles, no text, no signage, no
+posters with readable writing, no TV showing an image, no watermark, no
+wide-angle distortion, no cartoon, no illustration.</pre>
+</div>
+
+<h2>מה לבדוק בתוצאה</h2>
+<ul class="check">
+  <li><b>הסיבוב מלא.</b> 360 מעלות שלמות בתוך 7 השניות, לא 180 ולא עצירה באמצע. זה הכישלון הכי נפוץ.</li>
+  <li><b>המהירות קבועה.</b> המודל אוהב להאט באמצע. אם זה קורה — חזק את סעיף ה-camera lock.</li>
+  <li><b>הזהות יציבה.</b> אותה חיה בשנייה הראשונה ובשנייה האחרונה. פרווה, אוזניים, צבע עיניים.</li>
+  <li><b>החדר הנכון.</b> אם אתה רואה את החדר מסרטון התבנית — נתת יותר משלושה רפרנסים.</li>
+  <li><b>הצל נוגע ברצפה.</b> חיה שמרחפת מילימטר מעל הרצפה הורסת את כל השוט.</li>
+</ul>
+
+<div class="box">
+  <h3>עשית גרסה משלך?</h3>
+  <p>תשלח לי אותה. אני באמת רוצה לראות מה יצא — <span dir="ltr">@leviorel</span></p>
+</div>
+
+<footer>
+  © אוראל לוי · <span dir="ltr">@leviorel</span>
+</footer>
+
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(b=>{
+  b.addEventListener('click',async()=>{
+    const pre=document.getElementById(b.dataset.copy)
+    try{
+      await navigator.clipboard.writeText(pre.innerText)
+      const o=b.textContent; b.textContent='הועתק ✓'; setTimeout(()=>b.textContent=o,1600)
+    }catch{
+      const r=document.createRange(); r.selectNodeContents(pre)
+      const s=window.getSelection(); s.removeAllRanges(); s.addRange(r)
+      b.textContent='סומן — העתק ידנית'
+    }
+  })
+})
+</script>
+</body>
+</html>
